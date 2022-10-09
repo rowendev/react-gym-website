@@ -11,7 +11,7 @@ function Membership() {
       <div className="membership__wrapper">
         <div className="membership__card">
           <div className="membership__title">
-            <FaDumbbell />
+            <FaDumbbell className="card-icon" />
             <h3>Starter</h3>
           </div>
           <div className="membership__perks">
@@ -24,7 +24,7 @@ function Membership() {
         </div>
         <div className="membership__card">
           <div className="membership__title">
-            <FaDumbbell />
+            <FaDumbbell className="card-icon" />
             <h3>Silver</h3>
           </div>
           <div className="membership__perks">
@@ -37,7 +37,7 @@ function Membership() {
         </div>
         <div className="membership__card">
           <div className="membership__title">
-            <FaDumbbell />
+            <FaDumbbell className="card-icon" />
             <h3>Silver</h3>
           </div>
           <div className="membership__perks">

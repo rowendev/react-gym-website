@@ -2,6 +2,8 @@ import Navbar from "./layout/Navbar";
 import Hero from "./layout/Hero";
 import Service from "./layout/Service";
 import Membership from "./layout/Membership";
+import Team from "./layout/Team";
+import Form from "./layout/Form";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Hero />
       <Service />
       <Membership />
+      <Team />
+      <Form />
     </div>
   );
 }
