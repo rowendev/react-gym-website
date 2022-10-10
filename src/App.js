@@ -4,6 +4,7 @@ import Service from "./layout/Service";
 import Membership from "./layout/Membership";
 import Team from "./layout/Team";
 import Form from "./layout/Form";
+import Footer from "./layout/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Membership />
       <Team />
       <Form />
+      <Footer />
     </div>
   );
 }
