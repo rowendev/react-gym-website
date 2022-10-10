@@ -1,3 +1,4 @@
+import { useRef, useEffect } from "react";
 import Navbar from "./layout/Navbar";
 import Hero from "./layout/Hero";
 import Service from "./layout/Service";

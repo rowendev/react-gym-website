@@ -1,9 +1,11 @@
+/* 定義 字體、顏色 */
 :root {
   --red: #f9032f;
   --black: #000;
   --white: #fff;
 }
 
+/* 基本設定 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -135,6 +137,7 @@
   transition: 0.3s ease;
   text-decoration: none;
   border-radius: .5rem;
+  
 }
 
 .button:hover {
@@ -144,6 +147,7 @@
 
 /* service section */
 .services {
+  
   padding: 8rem calc((100vw - 1200px) /2);
 }
 

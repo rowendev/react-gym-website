@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { FaDumbbell } from "react-icons/fa";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Membership() {
+  const membershipRef = useRef(null);
+  useEffect(() => {
+    const el = membershipRef.current;
+
+    gsap.fromTo(
+      el,
+      { y: -100, opacity: 0 },
+      {
+        y: 1,
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
   return (
     <div className="memberships">
       <h1>View our plans</h1>
