@@ -1,13 +1,40 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import personImg1 from "../assets/guy-1.jpg";
 import personImg2 from "../assets/guy-2.jpg";
 import personImg3 from "../assets/guy-3.jpg";
 import personImg4 from "../assets/guy-4.jpg";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function Team() {
+  const teamRef = useRef(null);
+  useEffect(() => {
+    const el = teamRef.current;
+
+    gsap.fromTo(
+      ".team__card",
+      {
+        y: -150,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      },
+      {
+        y: 1,
+        opacity: 1,
+        duration: 1.5,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
   return (
     <div className="team">
-      <div className="team__wrapper">
+      <div className="team__wrapper" ref={teamRef}>
         <div className="team__text">
           <p className="topline">Private Coaching</p>
           <h1>Meet our trainers</h1>

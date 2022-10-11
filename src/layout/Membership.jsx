@@ -5,17 +5,24 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 function Membership() {
-  const membershipRef = useRef(null);
+  const cardRef = useRef(null);
   useEffect(() => {
-    const el = membershipRef.current;
+    const el = cardRef.current;
 
     gsap.fromTo(
-      el,
-      { y: -100, opacity: 0 },
+      ".membership__card",
+      {
+        y: -150,
+        opacity: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      },
       {
         y: 1,
         opacity: 1,
-        duration: 2,
+        duration: 1.2,
+        stagger: 0.3,
         scrollTrigger: {
           trigger: el,
         },
@@ -28,7 +35,7 @@ function Membership() {
       <p className="membership__desc">
         Get started today and receive 25% off your first month
       </p>
-      <div className="membership__wrapper">
+      <div className="membership__wrapper" ref={cardRef}>
         <div className="membership__card">
           <div className="membership__title">
             <FaDumbbell className="card-icon" />
